@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>San Francisco Font Tester</title>
+
+<link
+  rel="preload"
+  href="./SF-Compact.ttf"
+  as="font"
+  type="font/ttf"
+  crossorigin
+>
+
+<style>
+@font-face {
+  font-family: "SF Compact";
+  src: url("./SF-Compact.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f5f5f7;
+  color: #1d1d1f;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+main {
+  max-width: 850px;
+  margin: auto;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 36px;
+  letter-spacing: -1.5px;
+  margin: 0 0 4px;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #86868b;
+  font-size: 15px;
+  margin: 0;
+}
+
+section {
+  background: white;
+  border-radius: 18px;
+  padding: 22px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.sample {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+  margin: 5px 0;
+  line-height: 1.65;
+}
+
+.section-title {
+  display: block;
+  font-size: 23px;
+  line-height: 1.4;
+  margin: 0 0 20px;
+}
+
+.weight-name {
+  flex: 0 0 135px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #86868b;
+}
+
+.specimen {
+  font-size: 23px;
+}
+
+/* Native SF Pro */
+
+.pro {
+  font-family: -apple-system, BlinkMacSystemFont,
+    "SF Pro Text", "SF Pro Display", sans-serif;
+}
+
+/* Local SF Compact variable font */
+
+.compact {
+  font-family: "SF Compact", sans-serif;
+  font-synthesis: none;
+}
+
+/* Weight axis */
+
+.w100 { --wght: 100; }
+.w200 { --wght: 200; }
+.w300 { --wght: 300; }
+.w400 { --wght: 400; }
+.w500 { --wght: 500; }
+.w600 { --wght: 600; }
+.w700 { --wght: 700; }
+.w800 { --wght: 800; }
+.w900 { --wght: 900; }
+
+/* Width axis */
+
+.width-47 { --wdth: 47; }
+.width-60 { --wdth: 60; }
+.width-100 { --wdth: 100; }
+.width-132 { --wdth: 132; }
+
+/* Apply variable axes */
+
+.variable {
+  font-weight: var(--wght, 400);
+  font-variation-settings:
+    "wght" var(--wght, 400),
+    "wdth" var(--wdth, 100);
+}
+
+footer {
+  color: #86868b;
+  font-size: 12px;
+  text-align: center;
+  padding: 12px;
+}
+</style>
+</head>
+
+<body>
+<main>
+
+<header>
+  <h1>San Francisco</h1>
+  <p class="subtitle">All weights × all widths</p>
+</header>
+
+<!-- SF PRO COMPRESSED -->
+
+<section>
+  <h2 class="section-title pro variable w700 width-47">
+    SF Pro — Compressed · 47
+  </h2>
+
+  <div class="sample pro variable w100 width-47"><span class="weight-name">Ultralight · 100</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w200 width-47"><span class="weight-name">Thin · 200</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w300 width-47"><span class="weight-name">Light · 300</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w400 width-47"><span class="weight-name">Regular · 400</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w500 width-47"><span class="weight-name">Medium · 500</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w600 width-47"><span class="weight-name">Semibold · 600</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w700 width-47"><span class="weight-name">Bold · 700</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w800 width-47"><span class="weight-name">Heavy · 800</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w900 width-47"><span class="weight-name">Black · 900</span><span class="specimen">San Francisco</span></div>
+</section>
+
+<!-- SF PRO CONDENSED -->
+
+<section>
+  <h2 class="section-title pro variable w700 width-60">
+    SF Pro — Condensed · 60
+  </h2>
+
+  <div class="sample pro variable w100 width-60"><span class="weight-name">Ultralight · 100</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w200 width-60"><span class="weight-name">Thin · 200</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w300 width-60"><span class="weight-name">Light · 300</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w400 width-60"><span class="weight-name">Regular · 400</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w500 width-60"><span class="weight-name">Medium · 500</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w600 width-60"><span class="weight-name">Semibold · 600</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w700 width-60"><span class="weight-name">Bold · 700</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w800 width-60"><span class="weight-name">Heavy · 800</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w900 width-60"><span class="weight-name">Black · 900</span><span class="specimen">San Francisco</span></div>
+</section>
+
+<!-- SF PRO REGULAR -->
+
+<section>
+  <h2 class="section-title pro variable w700 width-100">
+    SF Pro — Regular · 100
+  </h2>
+
+  <div class="sample pro variable w100 width-100"><span class="weight-name">Ultralight · 100</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w200 width-100"><span class="weight-name">Thin · 200</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w300 width-100"><span class="weight-name">Light · 300</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w400 width-100"><span class="weight-name">Regular · 400</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w500 width-100"><span class="weight-name">Medium · 500</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w600 width-100"><span class="weight-name">Semibold · 600</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w700 width-100"><span class="weight-name">Bold · 700</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w800 width-100"><span class="weight-name">Heavy · 800</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w900 width-100"><span class="weight-name">Black · 900</span><span class="specimen">San Francisco</span></div>
+</section>
+
+<!-- SF PRO EXPANDED -->
+
+<section>
+  <h2 class="section-title pro variable w700 width-132">
+    SF Pro — Expanded · 132
+  </h2>
+
+  <div class="sample pro variable w100 width-132"><span class="weight-name">Ultralight · 100</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w200 width-132"><span class="weight-name">Thin · 200</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w300 width-132"><span class="weight-name">Light · 300</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w400 width-132"><span class="weight-name">Regular · 400</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w500 width-132"><span class="weight-name">Medium · 500</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w600 width-132"><span class="weight-name">Semibold · 600</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w700 width-132"><span class="weight-name">Bold · 700</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w800 width-132"><span class="weight-name">Heavy · 800</span><span class="specimen">San Francisco</span></div>
+  <div class="sample pro variable w900 width-132"><span class="weight-name">Black · 900</span><span class="specimen">San Francisco</span></div>
+</section>
+
+<!-- SF COMPACT -->
+
+<section>
+  <h2 class="section-title compact variable w700 width-100">
+    SF Compact
+  </h2>
+
+  <div class="sample compact variable w100 width-100"><span class="weight-name">Ultralight · 100</span><span class="specimen">San Francisco</span></div>
+  <div class="sample compact variable w200 width-100"><span class="weight-name">Thin · 200</span><span class="specimen">San Francisco</span></div>
+  <div class="sample compact variable w300 width-100"><span class="weight-name">Light · 300</span><span class="specimen">San Francisco</span></div>
+  <div class="sample compact variable w400 width-100"><span class="weight-name">Regular · 400</span><span class="specimen">San Francisco</span></div>
+  <div class="sample compact variable w500 width-100"><span class="weight-name">Medium · 500</span><span class="specimen">San Francisco</span></div>
+  <div class="sample compact variable w600 width-100"><span class="weight-name">Semibold · 600</span><span class="specimen">San Francisco</span></div>
+  <div class="sample compact variable w700 width-100"><span class="weight-name">Bold · 700</span><span class="specimen">San Francisco</span></div>
+  <div class="sample compact variable w800 width-100"><span class="weight-name">Heavy · 800</span><span class="specimen">San Francisco</span></div>
+  <div class="sample compact variable w900 width-100"><span class="weight-name">Black · 900</span><span class="specimen">San Francisco</span></div>
+</section>
+
+<footer>San Francisco Font Tester</footer>
+
+</main>
+</body>
+</html>
